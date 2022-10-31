@@ -1,0 +1,583 @@
+
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="description" content="">
+        <meta name="keywords" content="">
+        
+        <title>Trash Mails - Documentation</title>
+        <link rel="icon" type="image/png" href="images/favicon.png"/>
+        
+        <!-- Style CSS -->
+        <link href="css/collection.css" rel="stylesheet">
+        <!-- Fonts -->
+        <link href="https://fonts.googleapis.com/css?family=Raleway:100,300,400,500%7CLato:300,400" rel="stylesheet" type="text/css">
+    </head>
+    <body data-spy="scroll" data-target=".sidebar" data-offset="200">
+
+        <!-- Sidebar -->
+        <aside class="sidebar sidebar-boxed sidebar-dark">
+            <ul class="nav sidenav dropable">
+                <li><a href="#welcome">Welcome</a></li>
+                <li><a href="#requirements" title="Installation Requirements">Installation Requirements</a></li>
+                <li><a href="#create_database" title="Creating A New Database<">Creating A New Database</a></li>
+                <li><a href="#upload_files" title="Upload files">Upload files</a></li>
+                <li><a href="#create_email" title="Create Email Account">Create Email Account</a></li>
+                <li><a href="#install_script" title="Install Script">Install Script</a></li>
+                <li><a href="#cron_job" title="Setup a Cron Job">Set up a Cron Job</a></li>
+                <li><a href="#imap" title="Setup a IMAP">Set up a IMAP</a></li>
+                <li><a href="#smtp" title="Setup a SMTP">Set up a SMTP</a></li>
+                <li><a href="#spam_to_inbox" title="Catch Spam Messages">Catch Spam Messages</a></li>
+                <li><a href="#reCAPTCHA" title="reCAPTCHA">Set up Google reCAPTCHA</a></li>
+                <li><a href="#reCAPTCHA2" title="reCAPTCHA">Set up Invisible Google reCAPTCHA </a></li>
+                <li><a href="#upgrade" title="Upgrade">Upgrade</a></li>
+                <li><a href="#mutidomain" title="Muti domain">How To Add Multi Domains</a></li>
+                <li><a href="#credits" title="Credits">Credits</a></li>
+                <li><a href="#services" title="Services">Services</a></li>
+                <li><a href="#supports" title="Support">Support</a></li>
+            </ul>
+        </aside>
+        <!-- END Sidebar -->
+
+        <header class="site-header navbar-transparent">
+            <!-- Banner -->
+            <div class="banner auto-size" style="background-color: #00af91">
+                <div class="container-fluid text-white" style="background-color: #00af91;padding-left: 0;">
+                    <h1 style="margin: 0; padding: 30px 0;"><strong>Trash Mails</strong> Documentation</h1>
+                </div>
+            </div>
+            <!-- END Banner -->
+        </header>
+
+        <main class="container-fluid">
+            <!-- Main content -->
+            <article class="main-content" role="main">
+                <section id="welcome">
+                    <h2 style="margin-top: 0; line-height: 45px;">Welcome to Trash Mails</h2>
+                    <p><strong>Thanks for Buying</strong></p>
+                    <p>First of all, thank you for buying this theme. 
+                        To make your experience pleasant, we've added as 
+                        much info as needed in this documentation.<br> If you have 
+                        any questions which are beyond the scope of this help file, please feel free to ask your question.
+                    </p>
+                    <ul>
+                        <li>Created : 2021/09/05</li>
+                        <li>Latest update : 2022/03/27</li>
+                        <li>Created By: <strong>Lobage</strong></li>
+                        <li>Support Site: <a target="_blank" href="https://codecanyon.net/user/lobage#contact">Contact Us</a></li>
+                        <li>Version : 1.3.1</li>
+                        <li>Newsletter : <a target="_blank" href="https://www.getrevue.co/profile/lobage">Subscribe Now</a></li>
+                    </ul>
+                </section>
+
+                <section id="requirements">
+                    <div class="page-header">
+                        <h3 style="margin-top: 0; margin-bottom: 12px;">Installation Requirements</h3>
+                    </div>
+                    <p>We are using <strong>Laravel 8</strong> So these are the minimum server requirements, the installer will check if your server meets these or alternatively you can contact your hosting provider in order to make sure your server meets them.
+                    </p>
+                    <ul>
+                        <li>PHP &gt;= 7.4</li>
+                        <li>BCMath PHP Extension</li>
+                        <li>Ctype PHP Extension</li>
+                        <li>Fileinfo PHP extension</li>
+                        <li>JSON PHP Extension</li>
+                        <li>Mbstring PHP Extension</li>
+                        <li>OpenSSL PHP Extension</li>
+                        <li>PDO PHP Extension</li>
+                        <li>Tokenizer PHP Extension</li>
+                        <li>ZIP PHP Extension</li>
+                        <li>Iconv PHP Extension</li>
+                        <li>IMAP PHP Extension</li>
+                        <li>XML PHP Extension</li>
+                        <li>Fopen PHP Extension</li>
+                        <li><strong>Catch all Email (Default Email)</strong></li>
+                    </ul>
+
+
+                    <p>
+                        check All Extension And PHP Version
+                    </p>
+
+                    <img src="images/34.png"> 
+
+                    <img src="images/35.png"> 
+
+                </section>
+
+
+                <section id="create_database">
+                    <div class="page-header">
+                        <h3 style="margin-top: 0; margin-bottom: 12px;">Creating A New Database</h3>
+                    </div>
+                    <p>1- Before installing, you will need to create a new database. If you already know how to do this or have already created one, skip to the next step.<br>
+                        Please use <strong>empty database.</strong> 
+                    </p>
+                    <img src="images/1.png"> 
+
+                    <img src="images/2.png"> 
+
+                    <p><br>2- Now you need to create a new user. On the same page go to create a new database user <br></p>
+
+                    <img src="images/3.png"> 
+
+                    <p><br>3- Now add the user to the database <br></p>
+
+                    <img src="images/4.png"> 
+
+                    <p><br>4- And select full permissions on the database to that user<br></p>
+
+                    <img src="images/5.png"> 
+
+                </section>
+
+                <section id="upload_files">
+                        <div class="page-header">
+                            <h3 style="margin-top: 0; margin-bottom: 12px;">Upload files</h3>
+                        </div>
+                        <p>
+                            1 - Open File Manager
+                        </p>
+
+                        <img src="images/6.png"> 
+                        <br>
+                        <p>
+                            2- Open <span class="badge badge-primary">public_html</span> folder. If your website files will be in different folder you need to open that folder.
+                        </p>
+
+                        <img src="images/7.jpg"> 
+
+                        <br>
+                        <p>
+                            3- Click to Upload button to open upload manager.
+                        </p>
+
+                        <img src="images/8.png"> 
+                        <p>
+                            4- Select and upload Trash-mails.zip. You can close the tab when green bar appeared.
+                        </p>
+                        <img src="images/9.png"> 
+
+                        <p>
+                            5- Get back to the previous page and click to Reload you will see Trash-mails.zip
+                        </p>
+
+                        <img src="images/10.png"> 
+
+                        <p>
+                            6- Choose Trash-mails.zip and click to Extract then extract the ZIP file to the current directory.
+                        </p>
+
+                        <img src="images/11.jpg"> 
+
+                        <br><br>
+
+                        <div class="alert alert-danger" role="alert">
+                            <p>7- <strong>You should delete the Trash-mails.zip after upload completed.</strong></p>
+                        </div>
+
+                        <div class="page-header">
+                            <h3 style="margin-top: 0; margin-bottom: 12px;">.htaccess File</h3>
+                        </div>
+
+
+                        <p>1- On some operating systems, the dotfiles are hidden by default.please make sure your file explorer has the option to view hidden files turned on.</p>
+
+                        <img src="images/36.png"> 
+
+                        <p>2- Click <b>Show Hidden Files</b></p>
+
+                        <img src="images/37.png"> 
+
+                        <p>2- Click To Create New File</p>
+
+                        <img src="images/38.png"> 
+
+                        <p>2-File Name is <span class="badge badge-danger">.htaccess</span></p>
+
+                        <img src="images/39.png"> 
+
+                        <p>3- Choose .htaccess And Click Edit File And Add this Code </p>
+
+<pre class="line-numbers">
+<code class="language-markup">
+&lt;IfModule mod_rewrite.c&gt;
+    &lt;IfModule mod_negotiation.c&gt;
+        Options -MultiViews -Indexes
+    &lt;/IfModule&gt;
+
+    RewriteEngine On
+
+    # Handle Authorization Header
+    RewriteCond %{HTTP:Authorization} .
+    RewriteRule .* - [E=HTTP_AUTHORIZATION:%{HTTP:Authorization}]
+
+    # Redirect Trailing Slashes If Not A Folder...
+    RewriteCond %{REQUEST_FILENAME} !-d
+    RewriteCond %{REQUEST_URI} (.+)/$
+    RewriteRule ^ %1 [L,R=301]
+
+    # Send Requests To Front Controller...
+    RewriteCond %{REQUEST_FILENAME} !-d
+    RewriteCond %{REQUEST_FILENAME} !-f
+    RewriteRule ^ index.php [L]
+&lt;/IfModule&gt;
+</code>
+</pre>
+
+                        <img src="images/40.png"> 
+
+                        <p>4- Click Save Changes</p>
+
+                        <img src="images/41.png"> 
+
+                </section>
+
+                <section id="create_email">
+                    <div class="page-header">
+                        <h3 style="margin-top: 0; margin-bottom: 12px;">Create Email Account</h3>
+                    </div>
+
+                    <p><br>1- Open Email Accounts <br></p>
+
+                    <img src="images/12.png"> 
+
+                    <p><br>2- Now you need to create a new email (ex : admin@domain.com , catch@domain.com .... ) <br></p>
+
+                    <img src="images/13.png"> 
+
+                    <img src="images/14.png"> 
+
+                    <p><br>3- After creating the email, you need to direct all emails to this email (catch all Email ) <br></p>
+
+                    <img src="images/15.png"> 
+
+                    <p><br>4- Choose the domain you want to add on the site And Put last Email you created <br></p>
+
+                    <img src="images/16.png"> 
+
+                    <br><br>
+
+                    <div class="alert alert-info" role="alert">
+                        <strong>If you want to add more than one domain on your site, you need to repeat the previous step (4) ,
+                            and choose the new domain and forward to same email you created in step (2)</strong> 
+                    </div>
+                    
+                </section>
+
+                <section id="install_script">
+                    <div class="page-header">
+                        <h3 style="margin-top: 0; margin-bottom: 12px;">Install Script</h3>
+                    </div>
+                    <p>1- Open your website on browser. You will see Requirements page , Make sure that your server meets all the requirements.</p>
+
+                    <img src="images/17.png"> 
+
+                    <p>
+                        2- Click Next And Enter database credentials which you have created at the first step of this guide.
+                    </p>
+
+                    <img src="images/18.png"> 
+
+                    <p>
+                        3- Click Get Started.
+                    </p>
+
+                    <img src="images/19.png"> 
+
+                    <p>
+                        4- Enter your webiste information.
+                    </p>
+
+                    <img src="images/20.png"> 
+
+                    <p>
+                        5- Create Your Admin Account.
+                    </p>
+
+                    <img src="images/21.png"> 
+
+                </section>
+
+                <section id="cron_job">
+                    <div class="page-header">
+                        <h3 style="margin-top: 30px; margin-bottom: 12px;">Setup a Cron Job</h3>
+                    </div>
+
+                    <p>
+                        1- Go To Cron Job
+                    </p>
+
+                    <img src="images/22.png"> 
+
+                    <p>
+                        2- Get Your Command
+                    </p>
+
+                    <div class="alert alert-info" role="alert">
+                        /usr/local/bin/php /home/<b>SERVER_PATH</b>/script/artisan schedule:run &gt;&gt; /dev/null 2&gt;&amp;1
+                    </div>
+
+                    <div class="alert alert-warning" role="alert">
+                        Change <b>SERVER_PATH</b> to your website files directory Or Get Your Command From Your Admin Panle (yourdomain.com/admin/dashboard)
+                    </div>
+
+                    <img src="images/23.png">
+                    
+                    <p>
+                        3- Select Once Per Five Minutes(*/5 * * * *) And Put The Command 
+                    </p>
+                    
+                    <img src="images/24.png"> 
+            
+                </section>
+
+                <section id="imap">
+                    <div class="page-header">
+                        <h3 style="margin-top: 0; margin-bottom: 12px;">Setup a IMAP Server</h3>
+                    </div>
+                    <p>1- Open Email Accounts</p>
+
+                    <img src="images/12.png"> 
+
+                    <p>2- Choose the email you created in the previous <a href="#create_email">step</a> ,And Click Connect Devices</p>
+
+                    <img src="images/25.png"> 
+
+                    <p>3- You will find information about the IMAP AND SMTP </p>
+
+                    <img src="images/26_v.png">
+                    
+                    <p>4- Go To Your Admin panel > Settings > General , And Enter your IMAP information</p>
+
+                    <img src="images/27_v.png">
+
+                    <p>4- After adding the IMAP information Check if Your Server Is working And Save Page</p>
+
+                    <img src="images/28.png">
+                    
+                    <p>NB : IF You Get Any Error Try With Another Port And Encryption</p>
+
+                    </section>
+
+                <section id="smtp">
+                    <div class="page-header">
+                        <h3 style="margin-top: 0; margin-bottom: 12px;">Setup a SMTP</h3>
+                    </div>
+
+                    <p>1- Go To Your Admin panel > Settings > SMTP , And Enter your SMTP information</p>
+
+                    <img src="images/28_v.png">
+
+                    <div class="alert alert-danger" role="alert">
+                        the <strong>From Email Address</strong> Must be for your domain name or hosting !!
+                    </div>
+
+                    </section>
+
+                
+                    <section id="spam_to_inbox">
+                        <div class="page-header">
+                            <h3 style="margin-top: 0; margin-bottom: 12px;">Catch Spam Messages (Optional)</h3>
+                        </div>
+                        <div class="alert alert-info" role="alert">
+                            You must add a filter to enable your email to receive all messages to inbox 
+                        </div>
+    
+                        <p>1- Open Email Accounts</p>
+    
+                        <img src="images/12.png"> 
+    
+                        <p>2- Choose the email you created in the previous <a href="#create_email">step</a> ,And Click Manage</p>
+    
+                        <img src="images/30.png"> 
+    
+                        <p>3- Choose Manage Email Filters</p>
+    
+                        <img src="images/31.png"> 
+    
+                        <p>4- Create a New Filter</p>
+    
+                        <img src="images/32.png"> 
+    
+                        <p>5- choose Spam Bar and contains, then enter "+"" to "++++++++++" , And Repeat that for x10</p>
+    
+                        <img src="images/33.png"> 
+    
+                        <p>6- Browse and choose INBOX folder and click save</p>
+                        
+                    </section>
+
+                    <section id="reCAPTCHA">
+                        <div class="page-header">
+                            <h3 style="margin-top: 0; margin-bottom: 12px;">Set up Google reCAPTCHA</h3>
+                        </div>
+                        <p>
+                            1. Sign up for an API key pair for your site. <a href="https://www.google.com/recaptcha/admin/create" target="_blank">Click here</a> to start the process.
+                        </p>
+        
+                        <img src="images/42.png"> 
+    
+                        <ul>
+                            <li>Type your website Name</li>
+                            <li>Select reCAPTCHA v2</li>
+                            <li>Enter your website's URL under 'Domains'</li>
+                            <li>Enter emails of the administrators</li>
+                            <li>Accept reCAPTCHA Terms of Service</li>
+                            <li>Submit the form. Your API keys will be generated.</li>
+                        </ul>
+
+    
+                        <img src="images/43.png"> 
+    
+                        <p>2- Log in to your Admin Panel And Go To General Settings (Recaptcha Site Key & Recaptcha Secret Key)</p>
+                        <p>3- Enter the Key and Secret And Save Changes</p>
+    
+                        <img src="images/44.png"> 
+
+
+                    </section>
+
+                    <section id="reCAPTCHA2">
+                        <div class="page-header">
+                            <h3 style="margin-top: 0; margin-bottom: 12px;">Set up Invisible Google reCAPTCHA (Optional ) </h3>
+                        </div>
+                        <p>
+                            1. Sign up for an API key pair for your site. <a href="https://www.google.com/recaptcha/admin/create" target="_blank">Click here</a> to start the process.
+                        </p>
+        
+                        <img src="images/42_v2.png"> 
+    
+                        <ul>
+                            <li>Type your website Name</li>
+                            <li>Select reCAPTCHA v2 => Invisible reCAPTCHA badge</li>
+                            <li>Enter your website's URL under 'Domains'</li>
+                            <li>Enter emails of the administrators</li>
+                            <li>Accept reCAPTCHA Terms of Service</li>
+                            <li>Submit the form. Your API keys will be generated.</li>
+                        </ul>
+
+    
+                        <img src="images/43.png"> 
+    
+                        <p>2- Log in to your Admin Panel And Go To General Settings (Invisible Recaptcha Site Key & Invisible Recaptcha Secret Key)</p>
+                        <p>3- Enter the Key and Secret And Save Changes</p>
+    
+                        <img src="images/44_v2.png"> 
+
+
+                    </section>
+
+
+                        
+                <section id="upgrade">
+                    <div class="page-header">
+                        <h3 style="margin-top: 0; margin-bottom: 12px;">Upgrade</h3>
+                    </div>
+                    <div class="alert alert-danger">
+                        Before making an update, always remember to do a complete backup of your website.
+                    </div>
+                    <div class="alert alert-danger">
+                        If you've made any modifications to the software's files, your changes will be lost.
+                    </div>
+                    <div class="alert alert-danger">
+                        For Upgrade version, you need to do it your self. And we are not responsible if you lost data.
+                    </div>
+                </section>
+
+                <section id="mutidomain">
+                    <div class="page-header">
+                        <h3 style="margin-top: 0; margin-bottom: 12px;">How To Add Multi Domains</h3>
+                    </div>
+                    <p>
+                        If you want to add any new domain, it must be linked to your hosting first
+                    </p>
+                    
+                    <p>1 - Go to Default Address to Catch all emails </p>
+                    <img src="images/15.png"> 
+                    
+                    <p>2 - Select your new domain and put <a href="#create_email" >the same email</a> you created earlier </p>
+                    
+                    <img src="images/45.png"> 
+                    
+                    <p>3 - Go to your Admin Panel And Go To General Settings (Domains) and Add your new domains</p>
+                    
+                    <img src="images/46.png"> 
+                     
+                     
+                    
+                </section>
+                
+                <section id="credits">
+                    <div class="page-header">
+                        <h3 style="margin-top: 0; margin-bottom: 12px;">Credits</h3>
+                    </div>
+                    <p>
+                        Fonts Used int the template are google fonts, you can find them on Google Fonts API
+                    </p>
+                    <p><strong>Images from:</strong><br />
+                        <a target="_blank" href="https://www.freepik.com/">https://freepik.com/</a><br />
+                    </p>
+                    <p><strong>Laravel:</strong><br/>
+                        <a href="https://laravel.com/docs/8.x">Laravel</a><br>
+                    </p>
+                    <p><strong>Admin Panel</strong><br>
+                        <a href="https://getstisla.com/" target="_blank">STISLA</a><br>
+                    </p>
+                </section>
+                
+                <section id="services">
+                    <div class="page-header">
+                        <h3 style="margin-top: 0; margin-bottom: 12px;">Services</h3>
+                    </div>
+                    <h6><strong>To request any service, please contact us via the information below.</strong></h6>
+                    <ul>
+                        <li>Installations in Cpanel (10$)</li>
+                        <li>Installations in VPS (75$)</li>
+                        <li>Update in Cpanel (5$)</li>
+                        <li>Update in VPS (50$)</li>
+                        <li>Custom Feature (25$ Up)</li>
+                    </ul>
+                </section>
+
+                <section id="supports">
+                    <div class="page-header">
+                        <h3 style="margin-top: 0; margin-bottom: 12px;">Support</h3>
+                    </div>
+                    <h6><strong>24-48-Hour Turnaround Support:</strong></h6>
+                    <ul>
+                        <li>Quick, Dedicated & Professional Support!</li>
+                        <li>Our support response time can be up to 2 business days.</li>
+                        <li>For any pre-purchase query or any issue, please Contact us <a href="https://codecanyon.net/user/lobage#contact" target="_blank">Here</a>. Thanks!</li>
+                    </ul>
+                </section>
+
+            </article>
+            <!-- END Main content --> 
+        </main>
+
+        <!-- Footer -->
+        <footer class="site-footer">
+            <div class="container-fluid"> <a id="scroll-up" href="#"><i class="fa fa-angle-up"></i></a>
+                <div class="row">
+                    <div class="col-md-6 col-sm-6">
+                        <p>Copyright &copy; 2021. All right reserved</p>
+                    </div>
+                    <div class="col-md-6 col-sm-6">
+                        <ul class="footer-menu">
+                            <li><a href="https://codecanyon.net/user/lobage#contact"" target="_blank">Contact us</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </footer>
+        <!-- END Footer -->
+        
+        <!-- Scripts -->
+        <script src="js/jquery.js"></script>
+        <script src="js/custom.js"></script>
+    </body>
+</html>
